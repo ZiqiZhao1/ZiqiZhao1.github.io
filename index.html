@@ -23,19 +23,17 @@
                   Ziqi Zhao 赵子奇
                 </p>
                 <p>
-                Hi, I am a final-year master student at <a href="https://ir.sdu.edu.cn/index_en.htm">IR Lab</a>
-                of <a href="https://www.sdu.edu.cn/">Shandong University</a>, 
-                supervised by Prof. <a href="https://renzhaochun.github.io/">Zhaochun Ren</a>
-                and Prof. <a href="https://xinxin-me.github.io/">Xin Xin</a>.
-                I also worked with <a href="https://wzh-nlp.github.io/">Zihan Wang</a> 
-                in University of Amsterdam.
-                I received my bachelor's degree from the School of <a href="https://sse.tongji.edu.cn/">Software Engineering</a>
-                at <a href="https://www.tongji.edu.cn/">Tongji University</a> in 2023.
-                <!-- </p>
-                <p> -->
-                  My current research focuses on both fundamental and practical aspects of 
-                  reinforcement learning, 
-                  such as its applications in LLM post-training and recommendation systems.
+                  Hi, I am an incoming PhD student at <a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University</a>,
+                  supervised by Prof. <a href="https://www4.comp.polyu.edu.hk/~csxmwu/">Xiao-Ming Wu</a>.
+                  Before that, I was a master's student at <a href="https://www.sdu.edu.cn/">Shandong University</a>,
+                  supervised by Prof. <a href="https://renzhaochun.github.io/">Zhaochun Ren</a>
+                  and Prof. <a href="https://xinxin-me.github.io/">Xin Xin</a>.
+                  <!-- I received my bachelor's degree from the School of <a href="https://sse.tongji.edu.cn/">Software Engineering</a>
+                  at <a href="https://www.tongji.edu.cn/">Tongji University</a> in 2023. -->
+                </p>
+                <p>
+                  My current research interests lie in LLM post-training and reinforcement learning.
+                  I am open to any collaboration 😄.
                 </p>
                 <!-- <p>
                 <span style="color: red;"><strong>I am currently applying for PhD positions in 2026 Fall! </strong></span>
@@ -58,52 +56,19 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>News<span id="toggle-news-btn" onclick="toggleNews()" style="display:none;font-size:12px;font-weight:normal;color:#2563eb;cursor:pointer;margin-left:10px;">expand all</span></h2>
-                <ul id="news-list">
+                <h2>News</h2>
+                <ul id="news-list" style="max-height:105px;overflow-y:auto;padding-right:8px;">
+                  <li style="margin-bottom: 4px;"> <strong>2026.05:</strong> We released our <a href="https://arxiv.org/abs/2605.28014v1">paper</a> on reflective on-policy self-distillation (OPSD) for language model reasoning. Code is available at <a href="https://github.com/ZiqiZhao1/ROSD">here</a>.</li>
                   <li style="margin-bottom: 4px;"> <strong>2026.04:</strong> One <a href="https://arxiv.org/abs/2601.05053">paper</a> on reinforcement learning with verifiable rewards (RLVR) has been accepted by ACL'2026 Main Conference!</li>
                   <li style="margin-bottom: 4px;"> <strong>2025.05:</strong> One <a href="https://arxiv.org/abs/2404.10393">paper</a> on model-based offline reinforcement learning has been accepted by KDD'2025! </li>
                   <li style="margin-bottom: 4px;"> <strong>2025.05:</strong> Started an research intern on LLM post-training at Baidu. </li>
                   <li style="margin-bottom: 4px;"> <strong>2025.04:</strong> One <a href="https://dl.acm.org/doi/abs/10.1145/3726302.3730005">paper</a> on reinforcement learning for sequential recommendation has been accepted by SIGIR'2025!</li>
                   <li style="margin-bottom: 4px;"> <strong>2025.01:</strong> One <a href="https://dl.acm.org/doi/abs/10.1145/3696410.3714923">paper</a> on LLM-based named entity recognition has been accepted by WWW'2025!.</li>
-                  <!-- Add more news items below, they will be hidden by default -->
+                  <!-- Add more news items below; the list will scroll locally. -->
                 </ul>
               </td>
             </tr>
           </tbody></table>
-          
-          <script>
-            // News toggle functionality
-            function toggleNews() {
-              const newsList = document.getElementById('news-list');
-              const toggleBtn = document.getElementById('toggle-news-btn');
-              const hiddenItems = newsList.querySelectorAll('.hidden-news');
-              
-              const isExpanded = toggleBtn.textContent === 'show less';
-              
-              hiddenItems.forEach(item => {
-                item.style.display = isExpanded ? 'none' : 'list-item';
-              });
-              
-              toggleBtn.textContent = isExpanded ? 'expand all' : 'show less';
-            }
-            
-            // Check if there are more than 4 news items
-            window.addEventListener('DOMContentLoaded', function() {
-              const newsList = document.getElementById('news-list');
-              const newsItems = newsList.querySelectorAll('li');
-              const toggleBtn = document.getElementById('toggle-news-btn');
-              
-              // Hide items after the 4th one
-              if (newsItems.length > 4) {
-                for (let i = 4; i < newsItems.length; i++) {
-                  newsItems[i].classList.add('hidden-news');
-                  newsItems[i].style.display = 'none';
-                }
-                toggleBtn.style.display = 'inline-block';
-              }
-            });
-          </script>
-          
           <!-- Publications Section -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
@@ -117,6 +82,28 @@
 
           <!-- Publication Item 1 -->
           
+          <tr>
+            <td style="padding:16px;width:20%;vertical-align:middle">
+              <div style="width:200px;height:80px;display:flex;align-items:center;justify-content:center;">
+                <img src="images/pub/rosd.png" style="max-width:200px;max-height:80px;width:auto;height:auto;">
+              </div>
+            </td>
+            <td style="padding:8px;width:80%;vertical-align:middle">
+              <span class="papertitle">ROSD: Reflective On-Policy Self-Distillation for Language Model Reasoning across Domains</span>
+              <br>
+              <span style="font-family: 'Arial'">
+              <span style="font-weight: 700;white-space: nowrap;">Ziqi Zhao</span>, <span style="white-space: nowrap;">Xinyu Ma</span>, <span style="white-space: nowrap;">Liu Yang</span>, <span style="white-space: nowrap;">Yujie Feng</span>, <span style="white-space: nowrap;">Daiting Shi</span>, <span style="white-space: nowrap;">Jingzhou He</span>, <span style="white-space: nowrap;">Xin Xin</span>, <span style="white-space: nowrap;">Zhaochun Ren</span>, <span style="white-space: nowrap;">Xiao-Ming Wu</span>
+              </span>
+              <br>
+              <em>Preprint</em>
+              <br>
+              <a href="https://arxiv.org/abs/2605.28014v1">Paper</a>
+              /
+              <a href="https://github.com/ZiqiZhao1/ROSD">Code</a>
+              <p></p>
+            </td>
+          </tr>
+
           <tr>
             <td style="padding:16px;width:20%;vertical-align:middle">
               <div style="width:200px;height:80px;display:flex;align-items:center;justify-content:center;">
